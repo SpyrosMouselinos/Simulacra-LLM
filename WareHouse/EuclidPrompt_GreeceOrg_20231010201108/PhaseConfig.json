@@ -1,0 +1,73 @@
+{
+  "ToolProblemPlaning": {
+    "assistant_role_name": "Mathematician_design",
+    "user_role_name": "Mathematician_valid",
+    "phase_prompt": [
+      "According to the problem listed below: ",
+      "Task: \"{task}\".",
+      "Steps:\"{steps}\"",
+      "I suggest we should complete the task through a series of steps. I have provided you with a series of steps that I believe are helpful towards the solution.",
+      "As the {assistant_role}, you should try to implement a similar solution by using only the tools in the tool list.",
+      "Think step by step and reason yourself to the right decisions to make sure we get it right.",
+      "Please note that the next steps should be fully feasible. Make sure not to use numbers in your suggestion.",
+      "You will start your step suggestions with <TOOL> <STEP> NUMBER:, Then describe shortly the next step of the problem solution e.g., \"<Circle Tool> <STEP> 1: ... \". Use the least amount of steps you can. Do not use more than 7 Steps."
+    ]
+  },
+  "ProblemPlaning": {
+    "assistant_role_name": "Euclid_design",
+    "user_role_name": "Euclid_valid",
+    "phase_prompt": [
+      "According to the problem listed below: ",
+      "Task: \"{task}\".",
+      "Steps:\"{steps}\"",
+      "I suggest we should complete the task through a series of steps.",
+      "As the {assistant_role}, you should suggest a set of solution steps according to your knowledge",
+      "Think step by step and reason yourself to the right decisions to make sure we get it right.",
+      "Please note that the next step should be fully feasible. Make sure not to use numbers in your suggestion.",
+      "You will start your step suggestions with <STEP> NUMBER:, Then describe shortly the next step of the problem solution e.g., \"<STEP> 1: ... \". Use the least amount of steps you can. Do not use more than 7 Steps."
+    ]
+  },
+  "ProblemPlaningREV": {
+    "assistant_role_name": "Euclid_valid",
+    "user_role_name": "Euclid_design",
+    "phase_prompt": [
+      "According to the problem and steps listed below: ",
+      "Task: \"{task}\".",
+      "Steps:\"{steps}\"",
+      "I suggest we should make sure that the proposed steps solve the task.",
+      "As the {assistant_role}, you should suggest a set of corrections if needed, according to your knowledge",
+      "Think step by step and reason yourself to the right decisions to make sure we get it right.",
+      "Make sure to suggest any redundant steps, and make sure to merge the names of points or lines that happen to be duplicate.",
+      "If you think that some step is incorrect, please let me know why you think it is the case and i will try to re-write it."
+    ]
+  },
+  "ProblemPlaningSummary": {
+    "assistant_role_name": "Euclid_valid",
+    "user_role_name": "Euclid_valid",
+    "phase_prompt": [
+      "According to the problem and steps listed below: ",
+      "Task: \"{task}\".",
+      "Steps:\"{steps}\"",
+      "I suggest we should re-write the steps so that all suggested changes are incorporated.",
+      "As the {assistant_role}, you should re-write all the revised steps again in the same format"
+    ]
+  },
+  "StepValidation": {
+    "assistant_role_name": "Euclid_valid",
+    "user_role_name": "Mathematician_design",
+    "phase_prompt": [
+      "According to the problem and our steps taken so far listed below: ",
+      "Task: \"{task}\".",
+      "Steps:\"{steps}\"",
+      "As the {assistant_role}, you need to check if the steps are useful towards solving the problem. If the steps are not useful or contain errors, you must urge me to fix them.",
+      "You must respond with [Yes] if the steps are useful.",
+      "You must respond with [No] if the steps are not useful.",
+      "Reply with only one line, which starts with a single word <VALIDATE>, followed by a [Yes] or a [No].",
+      "If you respond with [No], please list the first step that you do not agree with and give a short explanation why.",
+      "An example response for each case would be:",
+      "<VALIDATE> [Yes]: All the steps are correct.",
+      "<VALIDATE> [No]: <Step X> is not correct because..."
+    ]
+  }
+}
+

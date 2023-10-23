@@ -1,0 +1,37 @@
+Task:
+Construct an angle of 60 degrees with the given side. Let A be the initial point of the given ray.
+
+Config:
+ChatEnvConfig.clear_structure: True
+ChatEnvConfig.git_management: False
+ChatEnvConfig.gui_design: False
+
+
+Roster:
+Euclid_design, Euclid_valid, Mathematician_design, Mathematician_valid
+
+Modality:
+
+
+Ideas:
+<STEP> 1: Draw a ray with initial point A.
+<STEP> 2: Using a compass, place the needle at point A and draw an arc that intersects the ray.
+<STEP> 3: Without changing the compass width, place the needle at the intersection point of the arc and the ray.
+<STEP> 4: Draw another arc with the same compass width, centered at the intersection point of the arc and the ray.
+<STEP> 5: Without changing the compass width, place the needle at the intersection point of the second arc and the first arc.
+<STEP> 6: Draw a line connecting point A and the intersection point of the second arc and the first arc.
+<STEP> 7: The angle formed by the ray and the line is a 60-degree angle.Thank you for your support! I appreciate your willingness to assist If I have any further questions or need additional help, I will definitely reach out to you Have a great day!
+
+
+Language:
+
+
+Code_Version:
+0.0
+
+Proposed_images:
+0
+
+Incorporated_images:
+0
+

@@ -1,0 +1,39 @@
+{
+  "chain": [
+    {
+      "phase": "ProblemPlaning",
+      "phaseType": "SimplePhase",
+      "max_turn_step": 1,
+      "need_reflect": "False"
+    },
+    {
+      "phase": "ProblemPlaningREV",
+      "phaseType": "SimplePhase",
+      "max_turn_step": 1,
+      "need_reflect": "False"
+    },
+        {
+      "phase": "ProblemPlaningSummary",
+      "phaseType": "SimplePhase",
+      "max_turn_step": 1,
+      "need_reflect": "False"
+    },
+    {
+      "phase": "ToolProblemPlaning",
+      "phaseType": "SimplePhase",
+      "max_turn_step": 3,
+      "need_reflect": "False"
+    }
+  ],
+  "recruitments": [
+    "Euclid_design",
+    "Euclid_valid",
+    "Mathematician_design",
+    "Mathematician_valid"
+  ],
+  "clear_structure": "True",
+  "brainstorming": "False",
+  "gui_design": "False",
+  "git_management": "False",
+  "self_improve": "False"
+}
